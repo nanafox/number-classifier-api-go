@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/nanafox/simple-http-client/pkg/client"
+	"github.com/nanafox/simple-http-client"
 
 	"github.com/nanafox/number-classifier-api-go/internal"
 )
@@ -36,7 +36,7 @@ func GetNumberClassification(c *fiber.Ctx) error {
 		funFact = fmt.Sprintf("%d is cool number", number)
 	}
 
-	return c.JSON(fiber.Map{
+	return c.Status(fiber.StatusOK).JSON(fiber.Map{
 		"number":     number,
 		"is_prime":   internal.IsPrime(number),
 		"is_perfect": internal.IsPerfect(number),

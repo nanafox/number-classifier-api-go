@@ -5,7 +5,7 @@ go 1.23.2
 require (
 	github.com/gofiber/fiber/v2 v2.52.6
 	github.com/joho/godotenv v1.5.1
-	github.com/nanafox/simple-http-client v0.0.0-20241208103657-ef8b90de5f24
+	github.com/nanafox/simple-http-client v1.0.0
 )
 
 require (
